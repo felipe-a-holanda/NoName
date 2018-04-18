@@ -21,4 +21,4 @@ class User(AbstractUser):
 class UserProfile(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, related_name="profile", verbose_name=_("user"), on_delete=models.CASCADE)
     birthday = models.DateTimeField(_("birthday"), null=True, blank=True)
-    #hometown = models.ForeignKey("cities_light.City", verbose_name=_("hometown"), null=True, blank=True , on_delete=models.SET_NULL)
+    hometown = models.ForeignKey("cities_light.City", verbose_name=_("hometown"), null=True, blank=True , on_delete=models.SET_NULL)

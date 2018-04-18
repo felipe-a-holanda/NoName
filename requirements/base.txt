@@ -1,0 +1,14 @@
+Django==2.0.4
+git+https://github.com/marfyl/django-autoslug.git
+django-cities-light==3.4.0
+django-crispy-forms==1.7.2
+django-timezone-field==2.1
+gevent==1.2.2
+greenlet==0.4.13
+gunicorn==19.7.1
+progressbar2==3.37.1
+python-utils==2.3.0
+pytz==2018.4
+six==1.11.0
+Unidecode==1.0.22
+

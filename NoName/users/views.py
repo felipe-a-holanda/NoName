@@ -19,7 +19,7 @@ class UserRedirectView(RedirectView):
         return reverse("users:detail", kwargs={"username": self.request.user.username})
 
 
-class UserUpdateView(UpdateView):
+class UserUpdateView(LoginRequiredMixin, UpdateView):
 
     fields = ["name"]
 
