@@ -37,6 +37,7 @@ class UserProfileAdmin(admin.ModelAdmin):
 
 
     list_display = ['name', 'hometown', 'birthday']
+    raw_id_fields = ['hometown']
     #list_filter = ['language']
     
     def name(self, obj):

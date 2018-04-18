@@ -11,9 +11,17 @@
 
       <h2>{{ object.username }}</h2>
       {% if object.name %}
-        <p>Name: {{ object.name }}</p>
-        <p>Birthday: {{ object.profile.birthday }}</p>
-        <p>Hometown: {{ object.profile.hometown }}</p>
+        <p>Name: <b>{{ object.name }}</b></p>
+        <p>Birthday: <b>{{ object.profile.birthday }}</b></p>
+        <p>Hometown: <b>{{ object.profile.hometown }}</b></p>
+        <br>
+        <p>Ascendent Sign: <b>{{ object.profile.astro.asc_sign }}</b></p>
+        <p>Sun Sign: <b>{{ object.profile.astro.planets.sun.sign }}</b></p>
+        <p>Moon Sign: <b>{{ object.profile.astro.planets.moon.sign }}</b></p>
+        <p>Mercury Sign: <b>{{ object.profile.astro.planets.mercury.sign }}</b></p>
+        <p>Venus Sign: <b>{{ object.profile.astro.planets.venus.sign }}</b></p>
+        <p>mars Sign: <b>{{ object.profile.astro.planets.mars.sign }}</b></p>
+        
       {% endif %}
     </div>
   </div>

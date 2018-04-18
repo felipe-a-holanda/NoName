@@ -46,6 +46,8 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     'users.apps.UsersConfig',
+    'astrology.apps.AstrologyConfig',
+    'hds.apps.HdsConfig',
     # Your stuff: custom apps go here
 ]
 
@@ -144,3 +146,5 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
     '/var/www/static/',
 ]
+
+CITIES_LIGHT_INCLUDE_COUNTRIES = ['BR']

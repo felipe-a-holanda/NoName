@@ -4,6 +4,8 @@ from django.urls import reverse
 from django.utils.translation import ugettext_lazy as _
 from django.conf import settings
 
+from astrology.astro import AstroChart
+
 
 class User(AbstractUser):
 
@@ -22,3 +24,10 @@ class UserProfile(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, related_name="profile", verbose_name=_("user"), on_delete=models.CASCADE)
     birthday = models.DateTimeField(_("birthday"), null=True, blank=True)
     hometown = models.ForeignKey("cities_light.City", verbose_name=_("hometown"), null=True, blank=True , on_delete=models.SET_NULL)
+    
+    def astro(self):
+        if self.hometown:
+            return AstroChart(self.birthday, latitude=self.hometown.latitude, longitude=self.hometown.longitude)
+        else:
+            return AstroChart(self.birthday)
+        
