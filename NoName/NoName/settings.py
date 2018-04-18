@@ -25,7 +25,7 @@ SECRET_KEY = 'a9(#!9jp)5im$6a4h31qdojy6v2(k$hy2z+5_z7)cixu8bvnnv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['astronary.com', 'www.astronary.com', 'clevenus.com', 'www.clevenus.com']
 
 
 # Application definition
